@@ -309,6 +309,11 @@ bool system::terminate_is_requested() const {
     return terminate_is_requested_;
 }
 
+const tracking_module* system::getTracker() const
+{
+    return tracker_;
+}
+
 void system::check_reset_request() {
     std::lock_guard<std::mutex> lock(mtx_reset_);
     if (reset_is_requested_) {

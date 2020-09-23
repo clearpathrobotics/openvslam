@@ -143,6 +143,8 @@ public:
     //!! Termination of the system is requested or not
     bool terminate_is_requested() const;
 
+    const tracking_module* getTracker() const;
+
 private:
     //! Check reset request of the system
     void check_reset_request();
