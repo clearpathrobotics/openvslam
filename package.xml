@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>openvslam</name>
+  <version>0.0.0</version>
+  <description>
+    OpenVSLAM: A Versatile Visual SLAM Framework
+  </description>
+  <maintainer email="amavrinac@clearpath.ai">Aaron Mavrinac</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <depend>dbow2</depend>
+  <depend>eigen</depend>
+  <depend>libg2o</depend>
+  <depend>opencv3</depend>
+  <depend>yaml-cpp</depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
