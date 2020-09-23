@@ -22,3 +22,14 @@ elseif(BOW_FRAMEWORK MATCHES "FBoW")
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/@OPENVSLAM_TARGETS_EXPORT_NAME@.cmake")
+
+FIND_LIBRARY(openvslam_LIBRARY openvslam
+    PATHS "@CMAKE_INSTALL_PREFIX@/lib"
+)
+FIND_PATH(openvslam_INCLUDE_DIR system.h
+    PATHS "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME@"
+)
+LIST(APPEND openvslam_INCLUDE_DIR ${openvslam_INCLUDE_DIR}/../)
+SET(openvslam_LIBRARIES ${openvslam_LIBRARY})
+SET(openvslam_LIBS ${openvslam_LIBRARY})
+SET(openvslam_INCLUDE_DIRS ${openvslam_INCLUDE_DIR})
