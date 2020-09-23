@@ -118,12 +118,11 @@ target_include_directories(${PROJECT_NAME}
                            PUBLIC
                            $<BUILD_INTERFACE:${json_INCLUDE_DIR}>
                            $<BUILD_INTERFACE:${spdlog_INCLUDE_DIR}>
-                           $<BUILD_INTERFACE:${BoW_INCLUDE_DIR}>
                            $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/>
                            $<INSTALL_INTERFACE:include/openvslam/3rd/json/include>
                            $<INSTALL_INTERFACE:include/openvslam/3rd/spdlog/include>
-                           $<INSTALL_INTERFACE:${BoW_INCLUDE_DIR}>
-                           $<INSTALL_INTERFACE:include/>)
+                           $<INSTALL_INTERFACE:include/>
+                           ${BoW_INCLUDE_DIR})
 
 # Link to required libraries
 target_link_libraries(${PROJECT_NAME}
